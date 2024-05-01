@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Open UG",
+  tagline: "Enhancing the developer community in Uganda through Open Source",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -54,28 +54,39 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "ugmobilemoney",
+        path: "ugmobilemoney",
+        routeBasePath: "ugmobilemoney",
+        // ... other options
+      },
+    ],
+  ],
+
   themeConfig: {
     metadata: [
       { name: "google-adsense-account", content: "ca-pub-6966673487419938" },
     ],
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/open-ug.png",
     navbar: {
-      title: "My Site",
+      title: "OPEN UG",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "open-ug-logo",
+        src: "img/open-ug.png",
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          to: "/ugmobilemoney/intro",
+          label: "UG Mobile Money",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/open-ug",
           label: "GitHub",
           position: "right",
         },
@@ -124,7 +135,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Open UG, Beingana Jim Junior.`,
     },
     prism: {
       theme: prismThemes.github,
