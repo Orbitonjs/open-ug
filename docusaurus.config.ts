@@ -63,6 +63,15 @@ const config: Config = {
         // ... other options
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "reactjs-media",
+        path: "reactjs-media",
+        routeBasePath: "reactjs-media",
+        // ... other options
+      },
+    ],
   ],
 
   themeConfig: {
