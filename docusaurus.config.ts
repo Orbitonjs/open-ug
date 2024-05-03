@@ -44,13 +44,6 @@ const config: Config = {
         gtag: {
           trackingID: "G-HNFVP2H2EX",
         },
-        sitemap: {
-          lastmod: "date",
-          changefreq: "weekly",
-          priority: 0.5,
-          ignorePatterns: ["/tags/**"],
-          filename: "sitemap.xml",
-        },
       } satisfies Preset.Options,
     ],
   ],
