@@ -49,6 +49,9 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        gtag: {
+          trackingID: "G-HNFVP2H2EX",
+        },
       } satisfies Preset.Options,
     ],
   ],
