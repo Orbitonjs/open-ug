@@ -8,6 +8,7 @@ import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 import HomeHeader from "../components/HomepageFeatures/header";
+import Projects from "../components/HomepageFeatures/projects";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -17,6 +18,7 @@ export default function Home(): JSX.Element {
       description="Enhancing the developer community in Uganda through Open Source."
     >
       <HomeHeader />
+      <Projects />
     </Layout>
   );
 }

@@ -34,23 +34,22 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: "./src/css/custom.css",
         },
         gtag: {
           trackingID: "G-HNFVP2H2EX",
+        },
+        sitemap: {
+          lastmod: "date",
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
         },
       } satisfies Preset.Options,
     ],
@@ -92,8 +91,8 @@ const config: Config = {
       items: [
         {
           position: "left",
-          to: "/ugmobilemoney/intro",
-          label: "UG Mobile Money",
+          to: "/#projects",
+          label: "Projects",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
@@ -107,28 +106,28 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Platforms",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Cranom Cloud",
+              href: "https://cranom.cloud",
+            },
+            {
+              label: "Cranom Store",
+              href: "https://store.cranom.cloud",
             },
           ],
         },
         {
-          title: "Community",
+          title: "Projects",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "UG Mobile Money",
+              href: "https://github.com/open-ug/ugmobilemoney-py",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "ReactJS Media",
+              href: "https://github.com/jim-junior/reactjs-media",
             },
           ],
         },
@@ -140,8 +139,12 @@ const config: Config = {
               to: "/blog",
             },
             {
+              label: "Site Map",
+              to: "/sitemap.xml",
+            },
+            {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/open-ug",
             },
           ],
         },

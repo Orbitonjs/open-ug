@@ -26,12 +26,12 @@ export default function HomeHeader() {
         gap: { sm: "1rem", md: "2.5rem" },
         alignItems: "center",
         justifyContent: "center",
-        borderBottomLeftRadius: "2.4rem",
-        borderBottomRightRadius: "2.4rem",
+        //borderBottomLeftRadius: "2.4rem",
+        //borderBottomRightRadius: "2.4rem",
         background:
           "radial-gradient(140% 107.13% at 50% 10%,var(--radiant-inner) 37.41%,#63e 69.27%,var(--radiant-outer) 100%)",
         padding: "0 2rem",
-        margin: { md: "0 1.5rem" },
+        //margin: { md: "0 1.5rem" },
         perspective: "1000px",
         [theme.getColorSchemeSelector("dark")]: {
           "--radiant-inner": "transparent",
@@ -71,9 +71,7 @@ export default function HomeHeader() {
             variant="solid"
             {...{
               component: "a",
-              href: "https://evervault.com/",
-              target: "_blank",
-              rel: "noreferrer noopener",
+              href: "#projects",
             }}
             sx={{ color: "black" }}
           >
