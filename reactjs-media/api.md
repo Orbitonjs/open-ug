@@ -49,6 +49,8 @@ interface VideoProps {
   height: string | number;
   width: string | number;
   poster: string;
+  contextMenu?: boolean;
+  contextMenuItems?: Array<ContextMenuItem>;
   onTimeUpdate?: (time: number) => void;
   onPlay?: () => void;
   onPause?: () => void;
@@ -77,5 +79,6 @@ type VideoPlayerRef = {
   togglePip: () => void;
   toggleMute: () => void;
   togglePlay: () => void;
+  setLoop: (loop: boolean) => void;
 };
 ```
