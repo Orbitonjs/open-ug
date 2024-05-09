@@ -34,3 +34,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 MIT License (MIT). Please see [License File](https://github.com/open-ug/ugmobilemoney-py/blob/main/LICENSE) for more information.
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ad96e8b378d5&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)

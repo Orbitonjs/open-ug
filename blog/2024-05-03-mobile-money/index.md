@@ -136,3 +136,6 @@ In this article, we have learned how to create Mobile Money Payments in Python i
 The `ugmobilemoney` library also supports other Payment Providers in Uganda, such as Airtel Money, Flutterwave, Yo Uganda, and Xente, It also tries to fully implement their APIs making it not only limited to mobile money payments but also other services like Airtime Topup, Bill Payments, Card Payments as long as the Service Provider has an API for it that is well documented.
 
 You can learn more about the `ugmobilemoney` library and how to use it by checking out the [documentation](https://open.cranom.cloud/ugmobilemoney/intro). or its Code on [Github](https://github.com/open-ug/ugmobilemoney-py)
+
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ad96e8b378d5&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)

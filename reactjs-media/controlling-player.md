@@ -48,3 +48,5 @@ const App = () => {
 In the example above, we create a Ref called `playerRef` using the `useRef` hook. We then define two functions, `playVideo` and `pauseVideo`, that call the `play()` and `pause()` methods on the player, respectively. Finally, we pass the `playerRef` to the `ref` prop of the `Video` component.
 
 To learn more about the available methods see [API reference](/reactjs-media/api#videoplayerref).
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ad96e8b378d5&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)

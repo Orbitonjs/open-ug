@@ -178,3 +178,5 @@ Even with a custom context menu, you can still have to set `contextMenu` prop to
 Congs!! You can now build your own Video player for your React App Just like A Pro, Building a custom video player with `reactjs-media` is easy and flexible. You can customize the player UI, controls, and context menu to match your application's design and requirements. You can also extend the player functionalities by using the provided hooks and components.
 
 Learn more about the available components, hooks, and types in the [API reference](/reactjs-media/api). In the Next Section
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ad96e8b378d5&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
