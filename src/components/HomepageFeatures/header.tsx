@@ -56,10 +56,11 @@ export default function HomeHeader() {
             },
           }}
         >
-          Done the Open Source Way
+          Side Projects by{" "}
+          <a href="https://github.com/jim-junior">@jim-junior</a>
         </Typography>
         <Typography level="body-sm" sx={{ textWrap: "pretty" }}>
-          Open UG is a community of software projects aimed to enhance the
+          Open UG is a collection of software projects aimed to enhance the
           developer community in Uganda through Open Source.
         </Typography>
         <ButtonGroup
@@ -87,7 +88,19 @@ export default function HomeHeader() {
             }}
             startDecorator={<FaGithub size="1.25rem" />}
           >
-            Github
+            Open UG Github
+          </Button>
+          <Button
+            sx={{ color: "black" }}
+            {...{
+              component: "a",
+              href: "https://github.com/jim-junior",
+              target: "_blank",
+              rel: "noreferrer noopener",
+            }}
+            startDecorator={<FaGithub size="1.25rem" />}
+          >
+            My Github
           </Button>
         </ButtonGroup>
       </Stack>
