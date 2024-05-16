@@ -149,12 +149,20 @@ export default function Projects() {
       </Typography>
       <LayoutGridAutofill>
         <ProjectCard
+          repo="jim-junior/reactjs-media"
+          documentation="/reactjs-media/intro"
+        />
+        <ProjectCard
+          repo="jim-junior/django-urlshortner"
+          documentation="https://github.com/jim-junior/django-urlshortner"
+        />
+        <ProjectCard
           repo="open-ug/ugmobilemoney"
           documentation="/ugmobilemoney/intro"
         />
         <ProjectCard
-          repo="jim-junior/reactjs-media"
-          documentation="/reactjs-media/intro"
+          repo="Orbitonjs/orbiton"
+          documentation="https://orbiton.js.org/"
         />
       </LayoutGridAutofill>
     </Box>
