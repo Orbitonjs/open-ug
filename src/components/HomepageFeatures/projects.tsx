@@ -61,7 +61,13 @@ function ProjectCard({ repo, documentation }) {
           </Typography>
         </div>
         <ButtonGroup size="sm" variant="soft">
-          <Button startDecorator={<SiGithub />}>GitHub</Button>
+          <Button
+            component="a"
+            href={repoData ? repoData.html_url : "#"}
+            startDecorator={<SiGithub />}
+          >
+            GitHub
+          </Button>
         </ButtonGroup>
       </CardContent>
       <CardContent orientation="horizontal" sx={{ gap: 2 }}>
