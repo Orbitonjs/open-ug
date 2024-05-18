@@ -49,7 +49,9 @@ function ProjectCard({ repo, documentation }) {
     }
   }
 
-  return (
+  return repoData === null ? (
+    <ProjectSkeleton />
+  ) : (
     <Card size="lg" sx={{ borderRadius: "xl", boxShadow: "lg" }}>
       <CardContent orientation="horizontal" sx={{ alignItems: "flex-start" }}>
         <div>
@@ -166,5 +168,50 @@ export default function Projects() {
         />
       </LayoutGridAutofill>
     </Box>
+  );
+}
+
+function ProjectSkeleton() {
+  return (
+    <Card size="lg" sx={{ borderRadius: "xl", boxShadow: "lg" }}>
+      <CardContent orientation="horizontal" sx={{ alignItems: "flex-start" }}>
+        <div>
+          <Typography>
+            <Skeleton>Lorem ipsum</Skeleton>
+          </Typography>
+          <Typography>
+            <Skeleton>
+              Lorem ipsum is placeholder text commonly used in the graphic,
+              print, and publishing industries.
+            </Skeleton>
+          </Typography>
+        </div>
+        <ButtonGroup size="sm" variant="soft">
+          <Button disabled startDecorator={<SiGithub />}>
+            GitHub
+          </Button>
+        </ButtonGroup>
+      </CardContent>
+      <CardContent orientation="horizontal" sx={{ gap: 2 }}>
+        <Typography
+          level="body-sm"
+          startDecorator={
+            <Sheet
+              variant="solid"
+              sx={{
+                width: 8,
+                height: 8,
+                borderRadius: "50%",
+                backgroundColor: "gray",
+              }}
+            />
+          }
+        >
+          <Skeleton />
+        </Typography>
+        <Skeleton variant="text" width="50%" />
+        <Skeleton variant="text" width="50%" />
+      </CardContent>
+    </Card>
   );
 }
