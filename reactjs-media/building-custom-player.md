@@ -4,26 +4,30 @@ sidebar_position: 4
 
 # Building a Custom Player
 
-Sometimes you might want to build a custom video player for your application to match your brand's design or add specific features. The `Video` component provided by `reactjs-media` is built in a modular way, making it easy to customize and extend.
+Sometimes you need a custom video player that matches your brand’s design or has specific features. With **reactjs-media**, building a custom player is modular and easy. You can create a completely unique UI while maintaining all core functionalities.
 
-The Video Player is divided into a number of components and hooks that you can use to build your custom player. These help you implement your own UI but while retaining all functionalities. These Include:
+## Modular Components for Customization
 
-- `VideoProvider`: The root component that provides the context for the video player.
-- `VideoControls`: A component containing the controls that can be used to control the video player.
-- `useControls`: A hook that returns the methods to control the video player, such as `play`, `pause`, `togglePlay`, `seek`, `setVolume`, `toggleMute`, `toggleFullScreen`, etc.
-- `VideoElement`: A component that wraps the HTML5 video element and provides the state and methods to control the video player.
-- `ContextMenu`: A component that provides a context menu for the video player.
-- `VideoPoster`: A component that displays the poster image before the video starts playing.
+The **reactjs-media** library divides the video player into reusable components and hooks. You can use these to build your own player UI and add specific features as needed. The key components and hooks are:
 
-:::warning
-The functionality on this page was added in version `v3.0.4`. So this article assumes you are using this version or later.
-:::
+- **VideoProvider**: The root component that provides context for the video player.
+- **VideoControls**: A component for video controls (play, pause, volume, etc.).
+- **useControls**: A hook that gives access to video control methods like `play`, `pause`, `seek`, `setVolume`, etc.
+- **VideoElement**: A wrapper for the HTML5 video element, providing full control over video playback.
+- **ContextMenu**: A customizable right-click menu for the video player.
+- **VideoPoster**: Displays a poster image before video playback starts.
 
-## Getting started
+> **Note:** This functionality requires **v3.0.4** or later of **reactjs-media**.
 
-We shall start with a simple example of a custom video player. That will reproduce the default player provided by the library.
+---
 
-```jsx
+## Getting Started: A Simple Custom Video Player
+
+In this section, we’ll reproduce the default player provided by **reactjs-media** using custom components.
+
+**Example Code:**
+
+```javascript
 import { VideoProvider, VideoControls, VideoElement, VideoPoster } from "reactjs-media";
 
 const CustomVideo = (props) => {
@@ -38,17 +42,25 @@ const CustomVideo = (props) => {
 }
 ```
 
-In the example above, we create a custom video player component called `CustomVideo`. We use the `VideoProvider` component to provide the context for the video player. We then render the `VideoElement` component with the video source and disable the default controls. We conditionally render the `VideoControls` component based on the `controls` prop. We also render the `VideoPoster` component with the poster image. Finally, we render the `ContextMenu` component to provide a context menu for the video player.
+In this example, we:
 
-:::note
-The `VideoProvider` and `VideoElement` component are required to provide the context for the video player. It should wrap all the components that need access to the video player state and methods.
-:::
+1. Use **VideoProvider** to create a context for the video player.
+2. Render the **VideoElement** with a custom `src` and disabled default controls.
+3. Conditionally render the **VideoControls** based on the `controls` prop.
+4. Display the **VideoPoster** until the video starts playing.
+5. Add a **ContextMenu** for additional interactions.
 
-## Creating custom controls
+> **Important:** Both **VideoProvider** and **VideoElement** are required to create a functional video player, as they handle state and methods for the player.
 
-You can create your own custom controlls UI if the defaulf doesn't match your design. You can use the `useControls` hook to get the methods to control the video player and build your own UI.
+---
 
-```jsx
+### Creating Custom Controls
+
+You can fully customize the controls to fit your design. Use the `useControls` hook to access methods like `play`, `pause`, `seek`, `toggleMute`, and more.
+
+**Example Code:**
+
+```javascript
 import { useControls } from "reactjs-media";
 
 const CustomControls = () => {
@@ -62,10 +74,10 @@ const CustomControls = () => {
       <button onClick={() => seek(10)}>Seek 10s</button>
       <button onClick={() => setVolume(0.5)}>Set Volume 50%</button>
       <button onClick={toggleMute}>Toggle Mute</button>
-      <button onClick={toggleFullScreen}>Toggle FullScreen</button>
+      <button onClick={toggleFullScreen}>Full Screen</button>
     </div>
   );
-}
+};
 
 const CustomVideo = (props) => {
   return (
@@ -79,66 +91,70 @@ const CustomVideo = (props) => {
 }
 ```
 
-In the example above, we create a custom controls component called `CustomControls`. We use the `useControls` hook to get the methods to control the video player. We then create buttons that call the different methods on the video player when clicked. We then render the `CustomControls` component inside the `CustomVideo` component.
+Here, we:
 
-## The Context Menu
+- Create **CustomControls** using buttons to control the video player.
+- Use the **useControls** hook to call methods such as `play`, `pause`, `seek`, `setVolume`, and `toggleFullScreen`.
+- Add **CustomControls** inside the **CustomVideo** component.
 
-Customizing the context menu can be done in two ways. You can either pass an array of `ContextMenuItem` objects to the `Video` component as the `contextMenuItems` prop or create your own context menu component.
+---
 
-### Using `contextMenuItems`
+### Customizing the Context Menu
 
-You can pass an array of `ContextMenuItem` objects to the `Video` component as the `contextMenuItems` prop. Each `ContextMenuItem` object should have a `label` and an `onClick` function.
+There are two ways to customize the context menu:
 
-```jsx
+**1. Using Custom Menu Items:**
+Pass an array of custom menu items to the `Video` component.
+
+**Example Code:**
+
+```javascript
 import { Video } from "reactjs-media";
-import {FaRocket, FaFire} from 'react-icons/fa';
+import { FaRocket, FaFire } from "react-icons/fa";
 
 const App = () => {
   const contextMenuItems = [
     {
       label: "Custom Item 1",
       onClick: () => alert("Custom Item 1 clicked"),
-      icon: "FaRocket",
+      icon: <FaRocket />,
     },
     {
       label: "Custom Item 2",
       onClick: () => alert("Custom Item 2 clicked"),
-      icon: "FaFire",
+      icon: <FaFire />,
     },
   ];
 
   return (
-    <div>
-      <Video
-        src={"/video.mkv"}
-        controls={true}
-        height={500}
-        width={800}
-        poster={
-          "https://hips.hearstapps.com/hmg-prod/images/ripley-pa-108-011822-01629-r-661067043d66f.jpg?resize=980:*"
-        }
-        contextMenu={true}
-        contextMenuItems={contextMenuItems}
-      />
-    </div>
+    <Video
+      src="/video.mkv"
+      controls={true}
+      height={500}
+      width={800}
+      poster="https://example.com/poster.jpg"
+      contextMenu={true}
+      contextMenuItems={contextMenuItems}
+    />
   );
 };
 ```
 
-In the example above, we create an array of `ContextMenuItem` objects called `contextMenuItems`. Each object has a `label` and an `onClick` function. We then pass this array to the `Video` component as the `contextMenuItems` prop.
+In this example, we pass custom items to the **Video** component’s `contextMenuItems` prop, each with an icon and `onClick` handler.
 
-### Creating a custom context menu
+---
 
-You can also create your own context menu component and render it inside the `VideoProvider` component. You can use the `useControls` hook to get the methods to control the video player. Here is an example of a custom context menu component:
+#### 2. Creating a Custom Context Menu
 
-```jsx
+You can also create your own context menu UI by using the `useControls` hook to control the video player.
 
+**Example Code:**
+
+```javascript
 import { useControls } from "reactjs-media";
-import {FaRocket, FaFire} from 'react-icons/fa';
-import { ContextMenu, Video } from "reactjs-media";
-import { VideoProvider, VideoControls, VideoElement, VideoPoster } from "reactjs-media";
+import { FaRocket, FaFire } from "react-icons/fa";
 
-const CustomContextMenu = ({contextMenuItems}) => {
+const CustomContextMenu = ({ contextMenuItems }) => {
   const { togglePlay, toggleMute, toggleFullScreen } = useControls();
 
   return (
@@ -146,12 +162,12 @@ const CustomContextMenu = ({contextMenuItems}) => {
       {contextMenuItems.map((item, index) => (
         <div key={index} onClick={item.onClick}>
           {item.icon}
-          {item.icon}
           {item.label}
         </div>
       ))}
+    </div>
   );
-}
+};
 
 const CustomVideo = (props) => {
   return (
@@ -159,23 +175,19 @@ const CustomVideo = (props) => {
       <VideoElement src={props.src} controls={false} />
       <VideoControls />
       <VideoPoster src={props.poster} />
-      <ContextMenu 
-      renderCustomMenu={(contextMenuItems) => <CustomContextMenu contextMenuItems={contextMenuItems}  />}
-       />
+      <ContextMenu renderCustomMenu={(items) => <CustomContextMenu contextMenuItems={items} />} />
     </VideoProvider>
   );
-}
+};
 ```
 
-In the example above, we create a custom context menu component called `CustomContextMenu`. We use the `useControls` hook to get the methods to control the video player. We then render the context menu items passed as props. We then render the `CustomContextMenu` component inside the `CustomVideo` component. 
+In this case, we create a **CustomContextMenu** and render it inside the **CustomVideo** component.
 
-:::note
-Even with a custom context menu, you can still have to set `contextMenu` prop to `true` in the `VideoProvider` component for it to be displayed.
-:::
+---
 
-## Conclusion
+### Conclusion
 
-Congs!! You can now build your own Video player for your React App Just like A Pro, Building a custom video player with `reactjs-media` is easy and flexible. You can customize the player UI, controls, and context menu to match your application's design and requirements. You can also extend the player functionalities by using the provided hooks and components.
+With **reactjs-media**, building a custom video player is both flexible and straightforward. You can tailor the player UI, controls, and context menu to perfectly match your application’s design and functionality needs. Get creative with the components and hooks provided, and you’ll have a professional video player in no time!
 
 Learn more about the available components, hooks, and types in the [API reference](/reactjs-media/api). In the Next Section
 

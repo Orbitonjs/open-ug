@@ -1,0 +1,101 @@
+---
+sidebar_position: 5
+---
+
+
+# WebRTC Guide
+
+WebRTC allows for real-time communication and media streaming directly between browsers. This guide will show you how to implement video streaming using the **Reactjs Media** video player, where the video source is a **MediaStream** object.
+
+## What is WebRTC?
+
+WebRTC (Web Real-Time Communication) is a technology that allows audio, video, and data to be shared between peers without the need for plugins or intermediary servers. It’s commonly used in video conferencing, file sharing, and media streaming applications.
+
+### Setting Up Video Streaming
+
+In this example, we’ll use WebRTC to capture a live media stream (from a webcam or any other media input) and display it using the **Reactjs Media** video player component. The key difference is that instead of passing a file path to the `src` prop, you will pass a **MediaStream** object.
+
+### Quick Start Example
+
+1. **Get access to the user's media (e.g., webcam):**
+
+We use the `navigator.mediaDevices.getUserMedia()` API to access the camera and microphone.
+
+2. **Pass the MediaStream to the Video Player:**
+
+Instead of a traditional video file URL, the `src` value will be the **MediaStream** object obtained from the user's device.
+
+#### Sample Code:
+
+```javascript
+import React, { useEffect, useState } from "react";
+import { Video } from "reactjs-media";
+
+const WebRTCVideoPlayer = () => {
+  const [mediaStream, setMediaStream] = useState(null);
+
+  useEffect(() => {
+    // Request access to the user's webcam
+    navigator.mediaDevices
+      .getUserMedia({ video: true, audio: true })
+      .then((stream) => {
+        setMediaStream(stream);  // Set the MediaStream object to state
+      })
+      .catch((error) => {
+        console.error("Error accessing media devices.", error);
+      });
+  }, []);
+
+  return (
+    <div>
+      {mediaStream && (
+        <Video
+          src={mediaStream}  // MediaStream object as the source
+          controls={true}
+          height={500}
+          width={800}
+          autoPlay={true}
+          muted={true}  // Mute by default to avoid feedback loops
+        />
+      )}
+    </div>
+  );
+};
+
+export default WebRTCVideoPlayer;
+```
+
+### Props Overview for WebRTC
+
+You can use the same set of props as with the standard video player, but with the `src` being a **MediaStream** object.
+
+| **Prop**     | **Type**   | **Description**                                                                 |
+| ------------ | ---------- | ------------------------------------------------------------------------------- |
+| `src`        | MediaStream| The live media stream object obtained from the user’s device.                    |
+| `controls`   | boolean    | Displays video controls like play/pause and volume (set to `true` by default).   |
+| `height`     | number     | Sets the height of the video player.                                             |
+| `width`      | number     | Sets the width of the video player.                                              |
+| `autoPlay`   | boolean    | Automatically plays the stream when it is available.                             |
+| `muted`      | boolean    | Mutes the video by default (helps avoid audio feedback when using microphones).  |
+
+### Event Handlers for MediaStream
+
+In addition to attributes, you can handle various video events like play, pause, and errors, just as you would with a static video file.
+
+| **Event**        | **Description**                                                                 |
+| ---------------- | ------------------------------------------------------------------------------- |
+| `onPlay`         | Triggered when the video stream starts playing.                                 |
+| `onPause`        | Triggered when the video stream is paused.                                      |
+| `onEnded`        | Triggered when the media stream ends (for instance, if the user stops sharing).  |
+| `onVolumeChange` | Triggered when the volume is adjusted.                                          |
+| `onError`        | Triggered if there’s an error loading or streaming the media.                   |
+
+### Conclusion
+
+This guide demonstrates how to use **WebRTC** to capture and stream live media directly within a React application. By leveraging the **Reactjs Media** player, you can display live streams with minimal configuration. Simply pass a **MediaStream** object as the `src` and customize the player as needed!
+
+Feel free to extend this example with additional WebRTC features like peer-to-peer connections, audio-only streaming, or screen sharing.
+
+--- 
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ad96e8b378d5&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
