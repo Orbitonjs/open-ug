@@ -151,6 +151,10 @@ export default function Projects() {
       </Typography>
       <LayoutGridAutofill>
         <ProjectCard
+          repo="jim-junior/crane-operator"
+          documentation="/crane-operator/intro"
+        />
+        <ProjectCard
           repo="jim-junior/reactjs-media"
           documentation="/reactjs-media/intro"
         />

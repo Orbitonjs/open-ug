@@ -74,6 +74,15 @@ const config: Config = {
         // ... other options
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "crane-operator",
+        path: "crane-operator",
+        routeBasePath: "crane-operator",
+        // ... other options
+      },
+    ],
   ],
 
   themeConfig: {
