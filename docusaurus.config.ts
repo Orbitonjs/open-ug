@@ -88,7 +88,16 @@ const config: Config = {
   themeConfig: {
     metadata: [
       { name: "google-adsense-account", content: "ca-pub-4708563499603847" },
-      { name: "monetag", content: "937d7fedcdcf00e8eab3779fc48fc1cc" },
+    ],
+    headTags: [
+      // Declare a <link> preconnect tag
+      {
+        tagName: "meta",
+        attributes: {
+          name: "monetag",
+          content: "937d7fedcdcf00e8eab3779fc48fc1cc",
+        },
+      },
     ],
     // Replace with your project's social card
     image: "img/open-ug.png",
