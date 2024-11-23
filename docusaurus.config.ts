@@ -165,6 +165,13 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  scripts: [
+    {
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4708563499603847",
+      async: true,
+      crossorigin: "anonymous",
+    },
+  ],
 };
 
 export default config;
