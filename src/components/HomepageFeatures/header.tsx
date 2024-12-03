@@ -7,6 +7,7 @@ import Sheet from "@mui/joy/Sheet";
 import Stack from "@mui/joy/Stack";
 import Typography from "@mui/joy/Typography";
 import { FaGithub } from "react-icons/fa";
+import { BiLink } from "react-icons/bi";
 
 export default function HomeHeader() {
   return (
@@ -56,8 +57,7 @@ export default function HomeHeader() {
             },
           }}
         >
-          Side Projects by{" "}
-          <a href="https://github.com/jim-junior">@jim-junior</a>
+          Open Source Software by <a href="https://www.cranom.tech">@cranom</a>
         </Typography>
         <Typography level="body-sm" sx={{ textWrap: "pretty" }}>
           Open UG is a collection of software projects aimed to enhance the
@@ -94,13 +94,13 @@ export default function HomeHeader() {
             sx={{ color: "black" }}
             {...{
               component: "a",
-              href: "https://github.com/jim-junior",
+              href: "https://www.cranom.tech",
               target: "_blank",
               rel: "noreferrer noopener",
             }}
-            startDecorator={<FaGithub size="1.25rem" />}
+            startDecorator={<BiLink size="1.25rem" />}
           >
-            My Github
+            Cranom Technologies
           </Button>
         </ButtonGroup>
       </Stack>
