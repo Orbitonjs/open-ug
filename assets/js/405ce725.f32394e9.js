@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[1584],{6391:e=>{e.exports=JSON.parse('{"permalink":"/open-ug/blog/tags/react","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

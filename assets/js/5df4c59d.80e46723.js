@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[3249],{3964:e=>{e.exports=JSON.parse('{"label":"video-player","permalink":"/open-ug/blog/tags/video-player","allTagsPath":"/open-ug/blog/tags","count":1,"unlisted":false}')}}]);

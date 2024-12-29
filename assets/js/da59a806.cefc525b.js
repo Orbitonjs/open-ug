@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[4589],{6727:e=>{e.exports=JSON.parse('{"label":"ugmobilemoney","permalink":"/open-ug/blog/tags/ugmobilemoney","allTagsPath":"/open-ug/blog/tags","count":1,"unlisted":false}')}}]);

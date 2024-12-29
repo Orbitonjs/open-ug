@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[4691],{6992:e=>{e.exports=JSON.parse('{"label":"react","permalink":"/open-ug/blog/tags/react","allTagsPath":"/open-ug/blog/tags","count":1,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[7579],{5193:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"ugmobilemoney"}')}}]);

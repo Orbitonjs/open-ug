@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[303],{1992:e=>{e.exports=JSON.parse('{"label":"mtn-momo","permalink":"/open-ug/blog/tags/mtn-momo","allTagsPath":"/open-ug/blog/tags","count":1,"unlisted":false}')}}]);

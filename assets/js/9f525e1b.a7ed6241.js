@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[367],{5808:e=>{e.exports=JSON.parse('{"label":"reactjs-media","permalink":"/open-ug/blog/tags/reactjs-media","allTagsPath":"/open-ug/blog/tags","count":1,"unlisted":false}')}}]);
