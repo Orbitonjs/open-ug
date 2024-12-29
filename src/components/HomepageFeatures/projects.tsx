@@ -152,7 +152,7 @@ export default function Projects() {
       <LayoutGridAutofill>
         <ProjectCard
           repo="jim-junior/crane-operator"
-          documentation="/open-ug/crane-operator/intro"
+          documentation="https://orbiton.js.org/open-ug/blog/building-a-kubernetes-operator"
         />
         <ProjectCard
           repo="jim-junior/reactjs-media"
