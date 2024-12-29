@@ -96,7 +96,7 @@ function ProjectCard({ repo, documentation }) {
         </Typography>
         <Typography level="body-sm">
           {repoData ? (
-            <Link href={documentation}>Documentation</Link>
+            <Link href={"/open-ug" + documentation}>Documentation</Link>
           ) : (
             <Skeleton />
           )}
