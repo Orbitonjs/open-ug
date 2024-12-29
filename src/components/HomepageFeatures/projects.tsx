@@ -96,7 +96,7 @@ function ProjectCard({ repo, documentation }) {
         </Typography>
         <Typography level="body-sm">
           {repoData ? (
-            <Link href={"/open-ug" + documentation}>Documentation</Link>
+            <Link href={documentation}>Documentation</Link>
           ) : (
             <Skeleton />
           )}
@@ -152,11 +152,11 @@ export default function Projects() {
       <LayoutGridAutofill>
         <ProjectCard
           repo="jim-junior/crane-operator"
-          documentation="/crane-operator/intro"
+          documentation="/open-ug/crane-operator/intro"
         />
         <ProjectCard
           repo="jim-junior/reactjs-media"
-          documentation="/reactjs-media/intro"
+          documentation="/open-ug/reactjs-media/intro"
         />
         <ProjectCard
           repo="jim-junior/django-urlshortner"
@@ -164,7 +164,7 @@ export default function Projects() {
         />
         <ProjectCard
           repo="open-ug/ugmobilemoney"
-          documentation="/ugmobilemoney/intro"
+          documentation="/open-ug/ugmobilemoney/intro"
         />
         <ProjectCard
           repo="Orbitonjs/orbiton"
