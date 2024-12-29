@@ -8,7 +8,7 @@ const config: Config = {
   favicon: "img/open-ug.png",
 
   // Set the production url of your site here
-  url: "https://open.cranom.cloud",
+  url: "https://orbiton.js.org",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/open-ug/",
@@ -88,16 +88,6 @@ const config: Config = {
   themeConfig: {
     metadata: [
       { name: "google-adsense-account", content: "ca-pub-4708563499603847" },
-    ],
-    headTags: [
-      // Declare a <link> preconnect tag
-      {
-        tagName: "meta",
-        attributes: {
-          name: "monetag",
-          content: "937d7fedcdcf00e8eab3779fc48fc1cc",
-        },
-      },
     ],
     // Replace with your project's social card
     image: "img/open-ug.png",
