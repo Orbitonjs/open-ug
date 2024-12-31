@@ -57,11 +57,12 @@ export default function HomeHeader() {
             },
           }}
         >
-          Open Source Software by <a href="https://www.cranom.tech">@cranom</a>
+          Open Source Software by{" "}
+          <a href="https://github.com/jim-junior">@jim-junior</a>
         </Typography>
         <Typography level="body-sm" sx={{ textWrap: "pretty" }}>
-          Open UG is a collection of software projects aimed to enhance the
-          developer community in Uganda through Open Source.
+          Open UG is a collection of software projects built by Jim Junior
+          Beingana
         </Typography>
         <ButtonGroup
           variant="plain"
