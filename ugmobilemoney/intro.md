@@ -13,6 +13,7 @@ The library also handles other underlying functions like encryption, Authorizati
 ## Providers Supported
 
 - [MTN Momo API.](https://momodeveloper.mtn.com).
+- [Yo Payments](https://flutterwave.com/ug/). (Premium. Contact <info@cranom.tech>)
 - [Futterwave API](https://flutterwave.com/ug/). (In Progress)
 - [Xente API](https://www.xente.co/). (In Progress)
 
