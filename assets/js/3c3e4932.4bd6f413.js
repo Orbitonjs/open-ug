@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[7339],{552:t=>{t.exports=JSON.parse('{"label":"tutorial","permalink":"/open-ug/blog/tags/tutorial","allTagsPath":"/open-ug/blog/tags","count":1,"unlisted":false}')}}]);

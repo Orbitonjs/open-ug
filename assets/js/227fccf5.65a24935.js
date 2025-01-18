@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[6645],{7608:e=>{e.exports=JSON.parse('{"label":"software architecture","permalink":"/open-ug/blog/tags/software-architecture","allTagsPath":"/open-ug/blog/tags","count":1,"unlisted":false}')}}]);

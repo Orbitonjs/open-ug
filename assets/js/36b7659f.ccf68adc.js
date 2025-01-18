@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[6479],{7884:e=>{e.exports=JSON.parse('{"permalink":"/open-ug/blog/tags/software-engineering","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

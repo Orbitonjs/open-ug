@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocumetations=self.webpackChunkdocumetations||[]).push([[4051],{143:t=>{t.exports=JSON.parse('{"permalink":"/open-ug/blog/tags/tutorial","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
